@@ -9,13 +9,6 @@ return require('packer').startup(function(use)
    	    }
     }
     use {
-    	"rose-pine/neovim",
-    	as = "rose-pine",
-    	config = function()
-    		vim.cmd("colorscheme rose-pine")
-        end
-    }
-    use {
  	    'nvim-treesitter/nvim-treesitter',
 	    lazy = false,
 	    build = ':TSUpdate'
@@ -51,5 +44,23 @@ return require('packer').startup(function(use)
     })
     use 'nvim-tree/nvim-web-devicons'
     use ('jay-babu/mason-nvim-dap.nvim')
+    use ('elmcgill/springboot-nvim')
+    use { 'nvimtools/none-ls.nvim',
+        requires = {
+            'nvimtools/none-ls-extras.nvim'
+        }
+    }
+    use({
+	    "L3MON4D3/LuaSnip",
+	    tag = "v2.4.1",
+    	run = "make install_jsregexp"
+    })
+    use "rafamadriz/friendly-snippets"
+    use "lukas-reineke/indent-blankline.nvim"
+    use "windwp/nvim-ts-autotag"
+    use {
+        "windwp/nvim-autopairs",
+    }
+    use "lewis6991/gitsigns.nvim{}"
 end)
 

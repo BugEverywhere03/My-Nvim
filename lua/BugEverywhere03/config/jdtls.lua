@@ -94,7 +94,6 @@ local function java_keymaps(bufnr)
     vim.keymap.set('v', '<leader>JC',
         "<Esc><Cmd>lua require('jdtls').extract_constant(true)<CR>",
         vim.tbl_extend("force", opts, { desc = "[J]ava Extract [C]onstant" }))
-
     -- Chạy test method gần con trỏ nhất (normal mode)
     vim.keymap.set('n', '<leader>Jt',
         "<Cmd>lua require('jdtls').test_nearest_method()<CR>",
@@ -250,7 +249,8 @@ local function setup_jdtls()
                     "javafx",
                     "com",
                     "org",
-                }
+                },
+                maxResults = 10,
             },
             sources = {
                 -- Số lượng class tối thiểu từ cùng package trước khi dùng wildcard import (*)
@@ -297,7 +297,7 @@ local function setup_jdtls()
     local init_options = {
         -- Các jar bổ sung cho debug adapter và test runner
         bundles = bundles,
-        -- Các tính năng mở rộng đặc thù của Eclipse/JDTLS
+       -- Các tính năng mở rộng đặc thù của Eclipse/JDTLS
         extendedClientCapabilities = extendedClientCapabilities
     }
 

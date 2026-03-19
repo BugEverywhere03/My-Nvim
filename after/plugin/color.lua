@@ -57,4 +57,4 @@ function ColorMyPencils(color)
     end
 end
 ColorMyPencils()
-
+vim.keymap.set("n", "<leader>cl" , function() vim.cmd("lua ColorMyPencils()") end, {})
