@@ -1,0 +1,6 @@
+-- vim.api.nvim_create_autocmd("FileType", {
+--    pattern = "oil",
+--    callback = function()
+--        vim.keymap.set("n", "<leader>pv", "<Nop>", { buffer = true })
+--    end
+--})

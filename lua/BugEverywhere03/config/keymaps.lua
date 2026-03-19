@@ -1,0 +1,10 @@
+vim.g.maplocalleader = " "
+vim.keymap.set("n" , "<Esc><Esc>", "<C-\\><C-n>", { desc = "Exit terminal mode"})
+vim.keymap.set("n" , "<C-h>", "<C-w>h", { desc = "Move focus to the left window" })
+vim.keymap.set("n" , "<C-l>", "<C-w>l", { desc = "Move focus to the right window" })
+vim.keymap.set("n" , "<C-k>", "<C-w>k", { desc = "Move focus to the top window" })
+vim.keymap.set("n" , "<C-j>", "<C-w>j", { desc = "Move focus to the bottom window" })
+vim.keymap.set("n" , "<leader>pv", vim.cmd.Ex, { desc = "Show NetrwTree" })
+vim.keymap.set("n" , "<leader><leader>", function()
+    vim.cmd('so')
+end, { desc = "[R]eload [C]onfig of sources"})
