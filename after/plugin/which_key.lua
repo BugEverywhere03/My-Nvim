@@ -1,0 +1,12 @@
+--local which_key = require("which-key")
+--which_key.setup({
+--})
+--which_key.add({
+--    {'<leader>/' , group = "Comments", hidden = false},
+--    {'<leader>r', group = "Code Action", hidden = false},
+--    {'<leader>d', group = "Debug Action", hidden = false},
+--    {'<leader>g', group = "Git Action", hidden = false},
+--    {'<leader>f', group = "Telescope Action",hidden = false},
+--    {'<leader>J', group = "Jdtls Action", hidden = false},
+--    {'<leader>sb', desc = "New Spring Project", hidden = true},
+--})
